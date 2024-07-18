@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const inter = Inter({subsets: ['latin']});
 
-export const metadata = {title: 'Life365', description: 'TEST'} as Metadata;
+export const metadata = {title: 'Life365 - Home', description: 'Home'} as Metadata;
 
 const RootLayout: React.FC<{children: React.ReactNode}> = function ({children}) {
     return (
