@@ -22,24 +22,5 @@
     "@types/react-dom": "^18",
     "npm-check-updates": "^16.14.20",
     "typescript": "^5"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "bracketSpacing": false,
-    "embeddedLanguageFormatting": "auto",
-    "htmlWhitespaceSensitivity": "css",
-    "insertPragma": false,
-    "jsxBracketSameLine": false,
-    "jsxSingleQuote": false,
-    "printWidth": 120,
-    "proseWrap": "preserve",
-    "quoteProps": "as-needed",
-    "requirePragma": false,
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 4,
-    "trailingComma": "es5",
-    "useTabs": false,
-    "vueIndentScriptAndStyle": false
   }
 }
