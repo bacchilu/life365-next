@@ -11,11 +11,14 @@ const inter = Inter({subsets: ['latin']});
 
 export const metadata = {title: 'Life365 - Home', description: 'Home'} as Metadata;
 
-const RootLayout: React.FC<{children: React.ReactNode}> = function ({children}) {
+const RootLayout: React.FC<{children: React.ReactNode}> = async function ({children}) {
+    const res = await fetch('https://www.life365.eu/api/warehouse/getCategories');
+    const categories = await res.json();
+
     return (
         <html lang="en">
             <body className={inter.className}>
-                <LifeHeader />
+                <LifeHeader categories={categories} />
                 <main>
                     <Container className="p-4">{children}</Container>
                 </main>

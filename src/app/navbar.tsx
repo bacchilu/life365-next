@@ -7,9 +7,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-export const LifeHeader = function () {
+interface Category {
+    Descrizione: string;
+    ID_Categoria: number;
+    slug: string;
+}
+
+export const LifeHeader: React.FC<{categories: Category[]}> = function ({categories}) {
     const pathname = usePathname();
 
+    const menuItems = categories.map((category) => (
+        <NavDropdown.Item key={category.ID_Categoria} href={`/${category.slug}`} as={Link}>
+            {category.Descrizione}
+        </NavDropdown.Item>
+    ));
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
@@ -24,7 +35,7 @@ export const LifeHeader = function () {
                             Link
                         </Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/action">Action</NavDropdown.Item>
+                            {menuItems}
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
