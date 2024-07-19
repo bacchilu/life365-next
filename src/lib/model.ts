@@ -7,6 +7,6 @@ export interface Sector {
 }
 
 export const getSectors = async function () {
-    const res = await axios.get<Sector>('https://www.life365.eu/api/warehouse/getCategories');
+    const res = await axios.get<Sector[]>('https://www.life365.eu/api/warehouse/getCategories');
     return res.data;
 };
