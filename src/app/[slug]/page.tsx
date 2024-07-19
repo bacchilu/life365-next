@@ -1,4 +1,4 @@
-import {getSectorBySlug} from '../../lib/model';
+import {getSectorBySlug} from '../../lib/model/sector';
 
 const SectorPage: React.FC<{params: {slug: string}}> = async function ({params}) {
     const currentSector = await getSectorBySlug(params.slug);

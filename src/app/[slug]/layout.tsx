@@ -1,6 +1,6 @@
 import {Metadata} from 'next';
 
-import {getSectorBySlug} from '../../lib/model';
+import {getSectorBySlug} from '../../lib/model/sector';
 
 export async function generateMetadata({params}: {params: {slug: string}}) {
     const currentSector = await getSectorBySlug(params.slug);
