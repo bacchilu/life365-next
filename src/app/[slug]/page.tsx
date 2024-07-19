@@ -1,5 +1,13 @@
-const SectorPage: React.FC<{params: {slug: string}}> = function ({params}) {
-    return <p>This is the {params.slug} Page</p>;
+import {getSectorBySlug} from '../../lib/model';
+
+const SectorPage: React.FC<{params: {slug: string}}> = async function ({params}) {
+    const currentSector = await getSectorBySlug(params.slug);
+
+    return (
+        <p>
+            This is the <em>{currentSector!.Descrizione}</em> Page
+        </p>
+    );
 };
 
 export default SectorPage;
