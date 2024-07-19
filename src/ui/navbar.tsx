@@ -6,17 +6,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Sector} from '../lib/model';
 
-interface Category {
-    Descrizione: string;
-    ID_Categoria: number;
-    slug: string;
-}
-
-export const LifeHeader: React.FC<{categories: Category[]}> = function ({categories}) {
+export const Header: React.FC<{sectors: Sector[]}> = function ({sectors}) {
     const pathname = usePathname();
 
-    const menuItems = categories.map((category) => (
+    const menuItems = sectors.map((category) => (
         <NavDropdown.Item key={category.ID_Categoria} href={`/${category.slug}`} as={Link}>
             {category.Descrizione}
         </NavDropdown.Item>
@@ -44,7 +39,7 @@ export const LifeHeader: React.FC<{categories: Category[]}> = function ({categor
     );
 };
 
-export const LifeFooter = function () {
+export const Footer = function () {
     return (
         <Navbar expand="lg" className="bg-body-tertiary" fixed="bottom">
             <Container>

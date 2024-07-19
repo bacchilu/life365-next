@@ -1,9 +1,9 @@
 'use client';
 
 import Button from 'react-bootstrap/Button';
-import styles from './page.module.css';
+import styles from './button.module.css';
 
-export const LifeButton = function () {
+export default function () {
     const handleClick = function () {
         console.log('Clicked!');
     };
@@ -13,4 +13,4 @@ export const LifeButton = function () {
             Hello World!
         </Button>
     );
-};
+}

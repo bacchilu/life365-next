@@ -1,9 +1,9 @@
-import {LifeButton} from './button';
+import Button from '../ui/button';
 
 const Home = function () {
     return (
         <p>
-            <LifeButton />
+            <Button />
         </p>
     );
 };
