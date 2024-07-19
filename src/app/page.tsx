@@ -1,11 +1,11 @@
 import Button from '../ui/button';
 
-const Home = function () {
+const HomePage = function () {
     return (
-        <p>
+        <div>
             <Button />
-        </p>
+        </div>
     );
 };
 
-export default Home;
+export default HomePage;
